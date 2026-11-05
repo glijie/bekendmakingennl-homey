@@ -9,7 +9,7 @@ const source = read('drivers/location/driver.flow.compose.json');
 const compiled = read('app.json');
 const allowed = ['new_notice','new_permit','new_traffic','new_tree','new_event','new_plan'];
 
-test('Athom: all supported Flow cards have device-aware formatted titles', () => {
+test('Athom: all Flow titles are clean and do not expose raw device placeholders', () => {
   assert.deepEqual(source.triggers.map(item => item.id), allowed);
   assert.deepEqual(source.conditions.map(item => item.id), ['has_new_notices']);
   assert.deepEqual(source.actions.map(item => item.id), ['check_now']);
@@ -18,8 +18,8 @@ test('Athom: all supported Flow cards have device-aware formatted titles', () =>
       assert.ok(card.title?.nl && card.title?.en, `${card.id} missing title`);
       assert.ok(card.titleFormatted?.nl && card.titleFormatted?.en, `${card.id} missing formatted title`);
       for (const lang of ['nl','en']) {
-        assert.match(card.titleFormatted[lang], /\[\[device\]\]/, `${card.id} missing device argument in ${lang}`);
-        assert.ok(!card.title[lang].includes('[[device]]'), 'Basic title should be compact');
+        assert.equal(card.titleFormatted[lang], card.title[lang], `${card.id} formatted ${lang} title must be clean`);
+        assert.ok(!card.title[lang].includes('[[device]]'), 'Do not expose device placeholders in public Flow titles');
       }
     }
   }

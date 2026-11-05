@@ -81,8 +81,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe bekendmaking bij [[device]]",
-        "en": "New notice at [[device]]"
+        "en": "New notice",
+        "nl": "Nieuwe bekendmaking"
       }
     },
     {
@@ -166,8 +166,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe vergunning bij [[device]]",
-        "en": "New permit at [[device]]"
+        "en": "New permit found",
+        "nl": "Nieuwe vergunning gevonden"
       }
     },
     {
@@ -251,8 +251,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe verkeersbekendmaking bij [[device]]",
-        "en": "New traffic notice at [[device]]"
+        "en": "New traffic notice",
+        "nl": "Nieuwe verkeersbekendmaking"
       }
     },
     {
@@ -336,8 +336,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe kap- of boombekendmaking bij [[device]]",
-        "en": "New tree or felling notice at [[device]]"
+        "en": "New tree notice",
+        "nl": "Nieuwe kap- of boombekendmaking"
       }
     },
     {
@@ -421,8 +421,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe evenementenbekendmaking bij [[device]]",
-        "en": "New event notice at [[device]]"
+        "en": "New event notice",
+        "nl": "Nieuwe evenementenbekendmaking"
       }
     },
     {
@@ -506,8 +506,8 @@
         }
       ],
       "titleFormatted": {
-        "nl": "Nieuwe ruimtelijke bekendmaking bij [[device]]",
-        "en": "New planning notice at [[device]]"
+        "en": "New planning notice",
+        "nl": "Nieuwe ruimtelijke bekendmaking"
       }
     }
   ],
@@ -519,8 +519,8 @@
         "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen"
       },
       "titleFormatted": {
-        "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen bij [[device]]",
-        "en": "New notices !{{are|aren't}} available at [[device]]"
+        "en": "New notices !{{are|aren't}} available",
+        "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen"
       }
     }
   ],
@@ -532,8 +532,8 @@
         "nl": "Nu controleren"
       },
       "titleFormatted": {
-        "nl": "Controleer [[device]] nu",
-        "en": "Check [[device]] now"
+        "en": "Check now",
+        "nl": "Nu controleren"
       }
     }
   ]
