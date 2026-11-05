@@ -53,6 +53,8 @@
       "path": "/monitors/:id/notices"
     }
   },
+  "source": "https://github.com/glijie/bekendmakingennl-homey",
+  "support": "https://github.com/glijie/bekendmakingennl-homey",
   "flow": {
     "triggers": [
       {
