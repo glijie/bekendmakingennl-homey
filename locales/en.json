@@ -1,0 +1,38 @@
+{
+  "pair": {
+    "window_title": "Bekendmakingen NL",
+    "title": "Monitor an address",
+    "address": "Address",
+    "address_hint": "Enter street, house number and city.",
+    "radius": "Radius around address",
+    "radius_hint": "Freely configurable from 50 metres to 50 kilometres.",
+    "add": "Check address and add",
+    "checking": "Checking address…",
+    "found": "Found:"
+  },
+  "errors": {
+    "radius": "Radius must be between 50 metres and 50 kilometres.",
+    "interval": "Check interval must be between 5 and 1440 minutes."
+  },
+  "categories": {
+    "permit": "Permit",
+    "traffic": "Traffic",
+    "tree": "Trees / felling",
+    "event": "Event",
+    "plan": "Spatial plan",
+    "regulation": "Regulation",
+    "other": "Other"
+  },
+  "recent": {
+    "unknown": "Notice",
+    "short_categories": {
+      "permit": "Permit",
+      "traffic": "Traffic",
+      "tree": "Trees",
+      "event": "Event",
+      "plan": "Plan",
+      "regulation": "Rules",
+      "other": "Other"
+    }
+  }
+}

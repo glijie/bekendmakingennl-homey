@@ -1,0 +1,129 @@
+[
+  {
+    "id": "search_mode",
+    "type": "dropdown",
+    "value": "address",
+    "label": {
+      "nl": "Zoekmethode",
+      "en": "Search mode"
+    },
+    "values": [
+      {
+        "id": "address",
+        "label": {
+          "nl": "Adres + afstand",
+          "en": "Address + radius"
+        }
+      },
+      {
+        "id": "woonplaats",
+        "label": {
+          "nl": "Stad of dorp (woonplaats)",
+          "en": "Town or city"
+        }
+      },
+      {
+        "id": "wijk",
+        "label": {
+          "nl": "Wijk",
+          "en": "District"
+        }
+      },
+      {
+        "id": "buurt",
+        "label": {
+          "nl": "Buurt",
+          "en": "Neighborhood"
+        }
+      },
+      {
+        "id": "gemeente",
+        "label": {
+          "nl": "Hele gemeente",
+          "en": "Entire municipality"
+        }
+      }
+    ],
+    "hint": {
+      "nl": "Bij wijzigen: vul ook het juiste adres of de gebiedsnaam in. Bij meerdere gelijknamige gebieden voeg je beter opnieuw toe.",
+      "en": "When changing mode, enter the correct address or area name. Re-pair ambiguous areas."
+    }
+  },
+  {
+    "id": "address",
+    "type": "text",
+    "label": {
+      "en": "Address",
+      "nl": "Adres"
+    },
+    "value": "",
+    "hint": {
+      "en": "Full Dutch address, e.g. street, house number and city.",
+      "nl": "Volledig Nederlands adres, bijvoorbeeld straat, huisnummer en woonplaats."
+    },
+    "highlight": true
+  },
+  {
+    "id": "area_query",
+    "type": "text",
+    "label": {
+      "nl": "Gebiedsnaam (niet voor adressen)",
+      "en": "Area name (not for addresses)"
+    },
+    "value": "",
+    "hint": {
+      "nl": "Alleen voor stad, dorp, wijk, buurt of gemeente.",
+      "en": "Only for town, city, district, neighborhood or municipality."
+    }
+  },
+  {
+    "id": "radius_m",
+    "type": "number",
+    "label": {
+      "en": "Radius (address mode only)",
+      "nl": "Afstand (alleen bij adres)"
+    },
+    "value": 1000,
+    "units": {
+      "en": "m",
+      "nl": "m"
+    },
+    "hint": {
+      "en": "Used only for Address + radius; area modes use the official geographic boundary.",
+      "nl": "Alleen gebruikt bij Adres + afstand. Bij dorp, wijk, buurt of gemeente bepaalt de officiële gebiedsgrens de zoekopdracht."
+    },
+    "min": 50,
+    "max": 50000,
+    "step": 50,
+    "highlight": true
+  },
+  {
+    "id": "check_interval_min",
+    "type": "number",
+    "label": {
+      "en": "Check interval",
+      "nl": "Controle-interval"
+    },
+    "value": 15,
+    "units": {
+      "en": "min",
+      "nl": "min"
+    },
+    "hint": {
+      "en": "How often Homey checks for new publications.",
+      "nl": "Hoe vaak Homey controleert op nieuwe publicaties."
+    },
+    "min": 5,
+    "max": 1440,
+    "step": 5
+  },
+  {
+    "type": "label",
+    "label": {
+      "nl": "Volledige bekendmakingen bekijken",
+      "en": "View complete notices"
+    },
+    "value": "Open Apps → Bekendmakingen NL → Instellingen om de volledige publicaties te bekijken.",
+    "id": "view_full_notices"
+  }
+]

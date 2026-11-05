@@ -1,0 +1,43 @@
+{
+  "name": {
+    "nl": "Bekendmakingenmonitor",
+    "en": "Notices monitor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "notice_count_new",
+    "notice_count_today",
+    "notice_count_week",
+    "notice_status"
+  ],
+  "capabilitiesOptions": {
+    "notice_status": {
+      "preventInsights": true
+    },
+    "notice_count_new": {
+      "preventInsights": true
+    },
+    "notice_count_today": {
+      "preventInsights": true
+    },
+    "notice_count_week": {
+      "preventInsights": true
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "/drivers/location/assets/images/small.png",
+    "large": "/drivers/location/assets/images/large.png",
+    "xlarge": "/drivers/location/assets/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "address"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Bekendmakingen NL v1.0.0 - testen op Homey Pro
+
+Vanuit deze map:
+1. homey login
+2. homey app validate --level publish
+3. homey app run
+
+Voor een vaste installatie:
+- homey app install
+
+Belangrijk:
+- Bewerk .homeycompose/app.json en de *.compose.json-bestanden.
+- app.json wordt door Homey Compose gegenereerd en is niet de bron.
