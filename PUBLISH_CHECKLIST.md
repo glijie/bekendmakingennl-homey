@@ -1,21 +1,28 @@
-# Publish checklist – Bekendmakingen NL
+# Publishchecklist – Bekendmakingen NL
 
-Voor iedere publicatie:
+## In de ZIP gecontroleerd
 
-- [ ] Versie in `.homeycompose/app.json`, `app.json` en `package.json` is gelijk.
-- [ ] `CHANGELOG.md` is bijgewerkt.
-- [ ] `.homeychangelog.json` bevat de Store-changelog voor de te publiceren versie.
-- [ ] Nederlandse en Engelse README zijn gecontroleerd.
-- [ ] App-description is een korte tagline en herhaalt de README niet.
-- [ ] App- en drivericonen/afbeeldingen voldoen aan de actuele Athom-richtlijnen.
-- [ ] Alle tests slagen.
-- [ ] `homey app validate --level publish` slaagt op de ontwikkel-pc.
-- [ ] App met `homey app run` of `homey app install` op echte Homey getest.
-- [ ] Indien beschikbaar: support-, bugs- en source-URL's in het manifest controleren.
+- [x] Versie in `.homeycompose/app.json`, `app.json` en `package.json` gelijk: `1.0.0`.
+- [x] `CHANGELOG.md` en `.homeychangelog.json` aanwezig (First release).
+- [x] `README.txt` en `README.nl.txt` als korte, onopgemaakte Store-teksten (maximaal twee alinea's, zonder URLs).
+- [x] Korte NL/EN-description staat los van de README.
+- [x] Pairing voor NL/EN vertaald met officiële Homey-i18n-functie.
+- [x] App-instellingen in NL/EN nagekeken.
+- [x] Privacyinformatie bijgewerkt voor adres- en gebiedszoeken en cache van maximaal 50 publicaties.
+- [x] App- en driverbeelden voldoen aan Athom-resoluties. Op verzoek niet aangepast.
+- [x] App- en drivericonen aanwezig; geen wijzigingen aan beelden/iconen.
+- [x] Alle lokale tests, JSON-, JavaScript- en ZIP-integriteitscontroles afgerond.
+- [x] Source- en supportlink verwijzen naar `https://github.com/glijie/bekendmakingennl-homey`.
 
-## Gebiedszoeken - test op echte Homey
-- Koppel een woonplaats (bijvoorbeeld Rozenburg) via PDOK zoekresultaat en controleer de gekozen grens.
-- Controleer in Homey App Instellingen dat alleen aantoonbaar binnen deze woonplaats gelegen bekendmakingen voorkomen; niet alle Rotterdamse publicaties.
-- Test daarnaast wijk, buurt en gemeente met echte KOOP-resultaten en de gevallen zonder coördinaten.
-- Bij KOOP-resultaten zonder geografische locatie kan de app de publicatie niet altijd aan een woonplaats/wijk/buurt koppelen; dit is een bewuste beperking. Test dat voor live publicatie.
-- Draai de officiële Athom `homey app validate --level publish` op een ontwikkel-pc en test de pairing op de echte Homey Pro 2019.
+## Nog op een echte Homey / bij Athom uitvoeren
+
+- [ ] `homey app validate --level publish` moet slagen. De officiële Homey CLI is niet beschikbaar in de bouwomgeving.
+- [ ] Test het toevoegen van een adres en alle vier gebiedstypen op Homey Pro.
+- [ ] Test de Engelse pairing en de Engelse app-instellingen op een Homey met Engelse taal.
+- [ ] Controleer enkele echte KOOP-resultaten voor adres, stad/dorp, wijk, buurt en gemeente, inclusief berichten zonder exacte geometrie.
+- [ ] Controleer of een nieuwe Flow-trigger de oorspronkelijke publicatielink meestuurt en dubbele meldingen uitblijven.
+- [ ] Test app-update op bestaande Homey-apparaten, inclusief bestaande instellingen, opgeslagen monitoren en Flow-kaarten.
+- [ ] Controleer de GitHub-repository en supportinformatie op bereikbaarheid.
+- [ ] Na succesvolle validatie als Test publiceren en vervolgens bij Athom certificering aanvragen.
+
+**Let op:** correcte afmetingen zijn een harde formaatvoorwaarde, maar Athom beoordeelt afbeeldingen en algemene kwaliteit ook inhoudelijk tijdens review.

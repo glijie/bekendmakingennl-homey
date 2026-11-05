@@ -1,0 +1,70 @@
+{
+  "pair": {
+    "window_title": "Bekendmakingen NL",
+    "title": "Monitor an address",
+    "address": "Address",
+    "address_hint": "Enter street, house number and city.",
+    "radius": "Radius around address",
+    "radius_hint": "Freely configurable from 50 metres to 50 kilometres.",
+    "add": "Check address and add",
+    "checking": "Checking…",
+    "found": "Found:",
+    "mode_title": "Search method",
+    "legend": "Monitor a location or address",
+    "mode_address": "Address + custom radius",
+    "mode_woonplaats": "Town or city (official boundary)",
+    "mode_wijk": "District",
+    "mode_buurt": "Neighbourhood",
+    "mode_gemeente": "Municipality",
+    "full_address": "Full address",
+    "address_placeholder": "Dorpsweg 1, Rotterdam",
+    "radius_label": "Radius in metres",
+    "radius_details": "From 50 metres to 50 km around the selected address.",
+    "area_search_label": "Search for a place or area",
+    "area_placeholder": "Rozenburg",
+    "area_help": "Select the correct PDOK result after searching. Places sharing a name are listed separately.",
+    "search_button": "Find area",
+    "choose_area_label": "Choose the correct area",
+    "area_warning": "Area boundaries are obtained from PDOK. Notices without sufficient location information may be missing; uncertain matches are labelled.",
+    "add_button": "Add to Homey",
+    "type_two": "Enter at least 2 characters.",
+    "searching": "Searching areas…",
+    "areas_found": "{count} possible areas found. Select the correct one.",
+    "areas_not_found": "No area found. Try a more specific search.",
+    "missing_address": "Enter an address first.",
+    "missing_area": "First search for and select the correct area.",
+    "area_selection_invalid": "First select an area from the search results.",
+    "bad_radius": "Radius must be between 50 metres and 50 kilometres.",
+    "address_short": "Enter a complete Dutch address.",
+    "address_not_found": "Address not found by PDOK.",
+    "address_coordinates": "PDOK returned no usable coordinates."
+  },
+  "errors": {
+    "radius": "Radius must be between 50 metres and 50 kilometres.",
+    "interval": "Check interval must be between 5 and 1440 minutes."
+  },
+  "categories": {
+    "permit": "Permit",
+    "traffic": "Traffic",
+    "tree": "Trees / felling",
+    "event": "Event",
+    "plan": "Spatial plan",
+    "regulation": "Regulation",
+    "other": "Other"
+  },
+  "recent": {
+    "unknown": "Notice",
+    "short_categories": {
+      "permit": "Permit",
+      "traffic": "Traffic",
+      "tree": "Trees",
+      "event": "Event",
+      "plan": "Plan",
+      "regulation": "Rules",
+      "other": "Other"
+    }
+  },
+  "settings_ui": {
+    "lang": "en"
+  }
+}

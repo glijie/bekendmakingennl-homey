@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Authority",
+    "nl": "Instantie"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/authority.svg"
+}

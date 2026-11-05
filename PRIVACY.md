@@ -1,24 +1,43 @@
 # Privacy – Bekendmakingen NL
 
-Bekendmakingen NL gebruikt geen eigen cloudserver, gebruikersaccount of advertentietracking.
+Bekendmakingen NL is een onafhankelijke Homey-app. De ontwikkelaar gebruikt geen eigen cloudserver, gebruikersaccount of advertentietracking voor deze app.
 
-## Welke gegevens worden gebruikt?
-- Het door de gebruiker gekozen adres wordt in Homey bij het apparaat opgeslagen.
-- Bij het toevoegen of wijzigen van een adres wordt het adres rechtstreeks vanuit de app naar PDOK gestuurd om de locatiecoördinaten te bepalen.
-- De gevonden coördinaten en ingestelde straal worden gebruikt voor zoekopdrachten bij KOOP naar officiële bekendmakingen.
-- De app bewaart lokaal op Homey welke publicaties al zijn gezien, zodat dezelfde bekendmaking niet telkens opnieuw als nieuw wordt gemeld.
-- Voor het overzicht bewaart de app per adres ook maximaal vijf recente publieke bekendmakingen (titel, categorie, datum, instantie, locatie en officiële link). Deze zijn alleen beschikbaar via de afgeschermde lokale Homey-app-API.
+## Welke gegevens verwerkt de app?
 
-## Geen eigen opslag buiten Homey
-De ontwikkelaar beheert voor deze app geen eigen server waarop adressen, locaties of zoekgeschiedenis worden opgeslagen. Externe overheidsdiensten kunnen hun eigen technische logbestanden bijhouden volgens hun eigen voorwaarden.
+- Bij **adres + straal** bewaart de app het gekozen adres, de gevonden coördinaten, de straal en het controle-interval in Homey. Om het adres op te zoeken wordt een verzoek aan de publieke PDOK Locatieserver verstuurd.
+- Bij **stad/dorp, wijk, buurt of gemeente** verstuurt de app de ingevoerde zoeknaam naar PDOK. De geselecteerde gebiedsnaam en bijbehorende geografische gegevens worden in Homey bewaard.
+- Voor de controles worden geografische zoekgegevens en, waar van toepassing, naam- of gemeentekenmerken gebruikt in verzoeken aan de publieke KOOP-zoekdienst. Welke velden meegaan hangt af van de zoekmodus.
+- De app bewaart op Homey identificaties van eerder verwerkte publicaties om herhaalde meldingen te voorkomen.
+- Voor het overzicht bewaart de app **maximaal 50 recente openbare bekendmakingen per bewaakte locatie** (onder meer titel, categorie, publicatiedatum, instantie, locatie en officiële link). In de app-instellingen kun je per locatie kiezen hoeveel daarvan je toont: **1 t/m 50**, standaard **5**. De zoekperiode is momenteel de afgelopen zeven dagen.
+- Het overzicht is beschikbaar via de Homey-appinstellingen en de bijbehorende Homey App API.
 
-## Onafhankelijke app
-Bekendmakingen NL is een onafhankelijke Homey-app en is niet verbonden aan of uitgegeven door KOOP, PDOK, Overheid.nl of een Nederlandse overheidsorganisatie.
+## Externe diensten en bewaren
+
+De ontwikkelaar exploiteert geen eigen server voor de opslag van adressen, locaties of zoekgeschiedenis. PDOK en KOOP kunnen bij het verwerken van verzoeken eigen technische logbestanden bijhouden volgens hun voorwaarden. Zoekgegevens van een apparaat worden met dat Homey-apparaat opgeslagen. Een voorkeur voor het aantal zichtbare berichten staat in de algemene app-instellingen en kan na het verwijderen van een afzonderlijk apparaat blijven bestaan totdat de app wordt verwijderd.
+
+## Onafhankelijkheid
+
+Bekendmakingen NL is niet verbonden aan of uitgegeven door KOOP, PDOK, Overheid.nl of een Nederlandse overheidsorganisatie. Officiële publicaties zijn afkomstig van externe bronnen; de app kan geen volledige dekking garanderen als de bron onvoldoende locatie-informatie bevat.
 
 ---
 
 # Privacy – English
 
-Bekendmakingen NL does not use its own cloud server, user account or advertising tracking. The address selected by the user is stored with the device in Homey. When an address is added or changed, the app sends it directly to PDOK to resolve its coordinates. Those coordinates and the configured radius are then used to query KOOP for official public notices. Seen publication identifiers are stored locally on Homey to prevent duplicate new-notice triggers. For the detailed overview, up to five recent public notices (title, category, date, authority, location and official URL) are stored locally per monitored address, accessible through the authenticated Homey app API. The developer does not operate a separate server that stores addresses, locations or search history. External government services may retain their own technical logs under their own terms. Bekendmakingen NL is an independent Homey app and is not affiliated with or published by KOOP, PDOK, Overheid.nl or any Dutch government organisation.
+Bekendmakingen NL is an independent Homey app. The developer does not operate a separate cloud server, user account or advertising tracker for this app.
 
-Bij gebiedszoeken worden gekozen plaats-, wijk-, buurt- of gemeentenamen naar PDOK verstuurd om de gebiedsgrens op te halen. De grens wordt lokaal op Homey opgeslagen; KOOP ontvangt vervolgens de geografische zoekrechthoek.
+## Data processed
+
+- In **address + radius** mode, the app stores the selected address, resolved coordinates, radius and check interval in Homey. It sends the address to the public PDOK Location Server for lookup.
+- In **town/city, district, neighbourhood or municipality** mode, the entered name is sent to PDOK. The selected area's name and geographical data are stored in Homey.
+- Checks send geographical search data and, when relevant, place or municipality metadata to the public KOOP search service. The precise parameters depend on the selected search mode.
+- Homey stores identifiers of previously processed notices to prevent repeat alerts.
+- The app caches **up to 50 recent public notices per monitored location** on Homey (including title, category, publication date, authority, location and official link). In app settings you can choose **1–50** to display for each location, with **5** as the default. The current search window covers the past seven days.
+- The overview is accessible through Homey app settings and its Homey App API.
+
+## External services and retention
+
+The developer does not operate a server that collects addresses, locations or search history. PDOK and KOOP may retain technical request logs under their own terms. Search information is stored with each Homey device. Preferences for how many notices to display are stored as global app settings and may remain after a single device is removed, until the app itself is uninstalled.
+
+## Independence
+
+The app is not affiliated with or published by KOOP, PDOK, Overheid.nl or a Dutch government organisation. Complete geographic coverage cannot be guaranteed when original publications lack sufficient location information.

@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Recent 1",
+    "nl": "Melding 1"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/recent.svg"
+}
