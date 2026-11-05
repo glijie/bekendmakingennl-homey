@@ -1,8 +1,0 @@
-.git/
-.github/
-test/
-*.zip
-*.log
-node_modules/
-
-INSTALLEREN_TESTEN.txt

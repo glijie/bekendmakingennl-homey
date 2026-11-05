@@ -1,3 +1,0 @@
-Volg officiële Nederlandse bekendmakingen rond een adres, stad, dorp, wijk, buurt of gemeente. Voeg een locatie toe aan Homey, stel voor een adres eventueel een straal in en ontvang via Flows een melding wanneer er een nieuwe publicatie wordt gevonden.
-
-Bekijk recente bekendmakingen in de app-instellingen, met volledige titels, datums, instanties en links naar de oorspronkelijke publicaties. Bekendmakingen NL gebruikt openbare gegevens van KOOP en PDOK en is een onafhankelijke app, geen overheidsdienst. Berichten met ontbrekende of onjuiste bronlocaties kunnen ontbreken of als onzeker worden aangemerkt.
