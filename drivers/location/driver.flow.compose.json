@@ -79,7 +79,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe bekendmaking bij [[device]]",
+        "en": "New notice at [[device]]"
+      }
     },
     {
       "id": "new_permit",
@@ -160,7 +164,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe vergunning bij [[device]]",
+        "en": "New permit at [[device]]"
+      }
     },
     {
       "id": "new_traffic",
@@ -241,7 +249,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe verkeersbekendmaking bij [[device]]",
+        "en": "New traffic notice at [[device]]"
+      }
     },
     {
       "id": "new_tree",
@@ -322,7 +334,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe kap- of boombekendmaking bij [[device]]",
+        "en": "New tree or felling notice at [[device]]"
+      }
     },
     {
       "id": "new_event",
@@ -403,7 +419,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe evenementenbekendmaking bij [[device]]",
+        "en": "New event notice at [[device]]"
+      }
     },
     {
       "id": "new_plan",
@@ -484,7 +504,11 @@
             "en": "Location verification"
           }
         }
-      ]
+      ],
+      "titleFormatted": {
+        "nl": "Nieuwe ruimtelijke bekendmaking bij [[device]]",
+        "en": "New planning notice at [[device]]"
+      }
     }
   ],
   "conditions": [
@@ -493,6 +517,10 @@
       "title": {
         "en": "New notices !{{are|aren't}} available",
         "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen"
+      },
+      "titleFormatted": {
+        "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen bij [[device]]",
+        "en": "New notices !{{are|aren't}} available at [[device]]"
       }
     }
   ],
@@ -502,6 +530,10 @@
       "title": {
         "en": "Check now",
         "nl": "Nu controleren"
+      },
+      "titleFormatted": {
+        "nl": "Controleer [[device]] nu",
+        "en": "Check [[device]] now"
       }
     }
   ]

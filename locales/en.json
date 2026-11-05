@@ -41,7 +41,11 @@
   },
   "errors": {
     "radius": "Radius must be between 50 metres and 50 kilometres.",
-    "interval": "Check interval must be between 5 and 1440 minutes."
+    "interval": "Check interval must be between 5 and 1440 minutes.",
+    "invalid_area_mode": "Unknown search method.",
+    "area_boundary_missing": "Area boundary is not available.",
+    "ambiguous_area": "Area is ambiguous. Pair the device again using the area search.",
+    "unknown_monitor": "Monitored address or area not found."
   },
   "categories": {
     "permit": "Permit",
@@ -66,5 +70,13 @@
   },
   "settings_ui": {
     "lang": "en"
+  },
+  "location_match": {
+    "exact": "Within boundary",
+    "place": "Place in location data",
+    "text": "Place in title",
+    "municipality": "Municipality-wide",
+    "possible": "Possible area match",
+    "unconfirmed": "Not verified"
   }
 }

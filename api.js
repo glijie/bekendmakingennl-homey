@@ -23,7 +23,7 @@ module.exports = {
     const id = String(params?.id || '');
     const device = monitorsForHomey(homey)
       .find(candidate => String(candidate.getData().id) === id);
-    if (!device) throw new Error('Unknown monitored address');
+    if (!device) throw new Error(typeof homey.__ === 'function' ? homey.__('errors.unknown_monitor') : 'Unknown monitored address');
 
     return {
       id,

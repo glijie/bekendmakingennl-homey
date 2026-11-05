@@ -13,6 +13,10 @@
 - [x] App- en drivericonen aanwezig; geen wijzigingen aan beelden/iconen.
 - [x] Alle lokale tests, JSON-, JavaScript- en ZIP-integriteitscontroles afgerond.
 - [x] Source- en supportlink verwijzen naar `https://github.com/glijie/bekendmakingennl-homey`.
+- [x] Alle zes triggers, één EN-voorwaarde en één DAN-actie hebben `titleFormatted` in NL/EN, inclusief apparaatargument `[[device]]`.
+- [x] De gegenereerde `app.json` bevat nu ook de acht Flow-definities, met `driver_id=location` en ongewijzigde kaart-ID’s.
+- [x] Automatische regressietests voorkomen dat Compose en het gegenereerde Flow-manifest weer uiteenlopen.
+- [x] Overige gebruikersgerichte locatie- en foutmeldingen worden volgens Homey-taal NL/EN weergegeven.
 
 ## Nog op een echte Homey / bij Athom uitvoeren
 

@@ -123,7 +123,11 @@
       "nl": "Volledige bekendmakingen bekijken",
       "en": "View complete notices"
     },
-    "value": "Open Apps → Bekendmakingen NL → Instellingen om de volledige publicaties te bekijken.",
-    "id": "view_full_notices"
+    "value": "Homey → Apps → Bekendmakingen NL",
+    "id": "view_full_notices",
+    "hint": {
+      "nl": "Ga in Homey naar Apps → Bekendmakingen NL → Instellingen voor het overzicht met volledige bekendmakingen.",
+      "en": "In Homey, open Apps → Bekendmakingen NL → Settings to view the complete notices."
+    }
   }
 ]

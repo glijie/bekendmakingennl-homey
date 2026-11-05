@@ -430,13 +430,612 @@
             "nl": "Volledige bekendmakingen bekijken",
             "en": "View complete notices"
           },
-          "value": "Open Apps → Bekendmakingen NL → Instellingen om de volledige publicaties te bekijken.",
-          "id": "view_full_notices"
+          "value": "Homey → Apps → Bekendmakingen NL",
+          "id": "view_full_notices",
+          "hint": {
+            "nl": "Ga in Homey naar Apps → Bekendmakingen NL → Instellingen voor het overzicht met volledige bekendmakingen.",
+            "en": "In Homey, open Apps → Bekendmakingen NL → Settings to view the complete notices."
+          }
         }
       ]
     }
   ],
-  "flow": {},
+  "flow": {
+    "triggers": [
+      {
+        "id": "new_notice",
+        "title": {
+          "en": "New notice",
+          "nl": "Nieuwe bekendmaking"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe bekendmaking bij [[device]]",
+          "en": "New notice at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      },
+      {
+        "id": "new_permit",
+        "title": {
+          "en": "New permit found",
+          "nl": "Nieuwe vergunning gevonden"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe vergunning bij [[device]]",
+          "en": "New permit at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      },
+      {
+        "id": "new_traffic",
+        "title": {
+          "en": "New traffic notice",
+          "nl": "Nieuwe verkeersbekendmaking"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe verkeersbekendmaking bij [[device]]",
+          "en": "New traffic notice at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      },
+      {
+        "id": "new_tree",
+        "title": {
+          "en": "New tree notice",
+          "nl": "Nieuwe kap- of boombekendmaking"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe kap- of boombekendmaking bij [[device]]",
+          "en": "New tree or felling notice at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      },
+      {
+        "id": "new_event",
+        "title": {
+          "en": "New event notice",
+          "nl": "Nieuwe evenementenbekendmaking"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe evenementenbekendmaking bij [[device]]",
+          "en": "New event notice at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      },
+      {
+        "id": "new_plan",
+        "title": {
+          "en": "New planning notice",
+          "nl": "Nieuwe ruimtelijke bekendmaking"
+        },
+        "tokens": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": {
+              "en": "Title",
+              "nl": "Titel"
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "title": {
+              "en": "Category",
+              "nl": "Categorie"
+            }
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "title": {
+              "en": "Category ID",
+              "nl": "Categorie-ID"
+            }
+          },
+          {
+            "name": "authority",
+            "type": "string",
+            "title": {
+              "en": "Authority",
+              "nl": "Instantie"
+            }
+          },
+          {
+            "name": "publication_date",
+            "type": "string",
+            "title": {
+              "en": "Publication date",
+              "nl": "Publicatiedatum"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "title": {
+              "en": "Official link",
+              "nl": "Officiële link"
+            }
+          },
+          {
+            "name": "identifier",
+            "type": "string",
+            "title": {
+              "en": "Identifier",
+              "nl": "Kenmerk"
+            }
+          },
+          {
+            "name": "location_match",
+            "type": "string",
+            "title": {
+              "nl": "Locatiecontrole",
+              "en": "Location verification"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "nl": "Nieuwe ruimtelijke bekendmaking bij [[device]]",
+          "en": "New planning notice at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "has_new_notices",
+        "title": {
+          "en": "New notices !{{are|aren't}} available",
+          "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen"
+        },
+        "titleFormatted": {
+          "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen bij [[device]]",
+          "en": "New notices !{{are|aren't}} available at [[device]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "check_now",
+        "title": {
+          "en": "Check now",
+          "nl": "Nu controleren"
+        },
+        "titleFormatted": {
+          "nl": "Controleer [[device]] nu",
+          "en": "Check [[device]] now"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=location"
+          }
+        ]
+      }
+    ]
+  },
   "_comment": "Generated snapshot for source review. Homey CLI regenerates app.json from Homey Compose; do not edit this file.",
   "tags": {
     "en": [

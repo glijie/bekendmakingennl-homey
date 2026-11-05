@@ -83,7 +83,7 @@ class LocationDevice extends Homey.Device {
   async _ensureCoordinates() {
     const mode=this.getSetting('search_mode')||'address';
     if(mode!=='address') {
-      if(!TYPES.includes(mode))throw new Error('Ongeldige gebiedsmodus');
+      if(!TYPES.includes(mode))throw new Error(this.homey.__('errors.invalid_area_mode'));
       if(this.getStoreValue('area_geometry')?.polygons)return;
       const id=this.getStoreValue('pdok_area_id');
       const area=await resolveArea(mode,id);
@@ -152,7 +152,7 @@ class LocationDevice extends Homey.Device {
       location: record.location || '',
       url: record.url || '',
       identifier: record.identifier || '',
-      location_match: ({exact:'Binnen grens',place:'Plaats in locatiegegevens',text:'Plaats in titel',municipality:'Gemeentebreed',possible:'Mogelijke gebiedstreffer'})[record.matchQuality] || 'Niet bevestigd',
+      location_match: this.homey.__(`location_match.${['exact','place','text','municipality','possible'].includes(record.matchQuality) ? record.matchQuality : 'unconfirmed'}`),
     };
   }
 
@@ -168,7 +168,7 @@ class LocationDevice extends Homey.Device {
       const radiusM = Number(this.getSetting('radius_m')) || 1000;
       const mode=this.getSetting('search_mode')||'address';
       const areaGeometry=mode==='address'?null:this.getStoreValue('area_geometry');
-      if(mode!=='address'&&!areaGeometry?.bounds)throw new Error('Gebiedsgrens niet beschikbaar');
+      if(mode!=='address'&&!areaGeometry?.bounds)throw new Error(this.homey.__('errors.area_boundary_missing'));
       const areaName=this.getStoreValue('area_name')||this.getSetting('area_query')||'';
       const area=areaGeometry?{...areaGeometry,type:mode,name:areaName}:null;
       const result=await fetchNotices({
@@ -276,7 +276,7 @@ class LocationDevice extends Homey.Device {
         // Never silently choose one from multiple identically named places.
         const normalized=query.replace(/\s+(?:Z[-. ]?H|N[-. ]?H|Zuid-Holland|Noord-Holland)$/i,'').trim().toLocaleLowerCase('nl');
         const same=matches.filter(area=>area.name.toLocaleLowerCase('nl')===normalized);
-        if(same.length!==1)throw new Error('Gebied niet eenduidig gevonden. Voeg het apparaat opnieuw toe via de gebiedszoeker.');
+        if(same.length!==1)throw new Error(this.homey.__('errors.ambiguous_area'));
         selected=await resolveArea(mode,same[0].id);
       }
     }

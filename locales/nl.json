@@ -41,7 +41,11 @@
   },
   "errors": {
     "radius": "Afstand moet tussen 50 meter en 50 kilometer liggen.",
-    "interval": "Controle-interval moet tussen 5 en 1440 minuten liggen."
+    "interval": "Controle-interval moet tussen 5 en 1440 minuten liggen.",
+    "invalid_area_mode": "Onbekende zoekmethode.",
+    "area_boundary_missing": "Gebiedsgrens niet beschikbaar.",
+    "ambiguous_area": "Gebied niet eenduidig gevonden. Voeg het apparaat opnieuw toe via de gebiedszoeker.",
+    "unknown_monitor": "Bewaakt adres of gebied niet gevonden."
   },
   "categories": {
     "permit": "Vergunning",
@@ -66,5 +70,13 @@
   },
   "settings_ui": {
     "lang": "nl"
+  },
+  "location_match": {
+    "exact": "Binnen grens",
+    "place": "Plaats in locatiegegevens",
+    "text": "Plaats in titel",
+    "municipality": "Gemeentebreed",
+    "possible": "Mogelijke gebiedstreffer",
+    "unconfirmed": "Niet bevestigd"
   }
 }
