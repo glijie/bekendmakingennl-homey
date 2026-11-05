@@ -1,0 +1,14 @@
+{
+  "type": "number",
+  "title": {
+    "en": "7 days",
+    "nl": "7 dagen"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "min": 0,
+  "step": 1,
+  "decimals": 0,
+  "icon": "/assets/capabilities/week.svg"
+}

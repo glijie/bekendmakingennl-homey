@@ -1,0 +1,4 @@
+'use strict';
+const test=require('node:test'); const assert=require('node:assert/strict'); const {recordBlocks,numberOfRecords}=require('../lib/xml'); const {parseRecord}=require('../lib/koop');
+const xml=`<searchRetrieveResponse><numberOfRecords>1</numberOfRecords><records><record><recordData><meta><dc:identifier xmlns:dc="x">gmb-2026-12345</dc:identifier><dc:title xmlns:dc="x">Omgevingsvergunning verleend</dc:title><dcterms:modified xmlns:dcterms="x">2026-09-25</dcterms:modified><dc:creator xmlns:dc="x">Gemeente Test</dc:creator><dc:spatial xmlns:dc="x">Teststraat 1</dc:spatial></meta></recordData></record></records></searchRetrieveResponse>`;
+test('SRU basic parse',()=>{assert.equal(numberOfRecords(xml),1); const blocks=recordBlocks(xml); assert.equal(blocks.length,1); const r=parseRecord(blocks[0]); assert.equal(r.identifier,'gmb-2026-12345'); assert.equal(r.category,'permit'); assert.match(r.url,/gmb-2026-12345\.html/);});

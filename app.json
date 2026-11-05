@@ -1,0 +1,469 @@
+{
+  "id": "com.patrick.bekendmakingennl",
+  "version": "1.0.0",
+  "compatibility": ">=12.9.0",
+  "sdk": 3,
+  "runtime": "nodejs",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Bekendmakingen NL",
+    "nl": "Bekendmakingen NL"
+  },
+  "description": {
+    "nl": "Ontdek wat er officieel wordt gepubliceerd rond de plekken die voor jou tellen.",
+    "en": "Discover what is officially published around the places that matter to you."
+  },
+  "category": "tools",
+  "brandColor": "#154273",
+  "author": {
+    "name": "Patrick"
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "permissions": [],
+  "capabilities": {
+    "notice_last_authority": {
+      "type": "string",
+      "title": {
+        "en": "Authority",
+        "nl": "Instantie"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/authority.svg"
+    },
+    "notice_last_category": {
+      "type": "enum",
+      "title": {
+        "en": "Last category",
+        "nl": "Laatste categorie"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "permit",
+          "title": {
+            "en": "Permit",
+            "nl": "Vergunning"
+          }
+        },
+        {
+          "id": "traffic",
+          "title": {
+            "en": "Traffic",
+            "nl": "Verkeer"
+          }
+        },
+        {
+          "id": "tree",
+          "title": {
+            "en": "Trees / felling",
+            "nl": "Bomen / kap"
+          }
+        },
+        {
+          "id": "event",
+          "title": {
+            "en": "Event",
+            "nl": "Evenement"
+          }
+        },
+        {
+          "id": "plan",
+          "title": {
+            "en": "Spatial plan",
+            "nl": "Ruimtelijk plan"
+          }
+        },
+        {
+          "id": "regulation",
+          "title": {
+            "en": "Regulation",
+            "nl": "Regelgeving"
+          }
+        },
+        {
+          "id": "other",
+          "title": {
+            "en": "Other",
+            "nl": "Overig"
+          }
+        }
+      ],
+      "icon": "/assets/capabilities/category.svg"
+    },
+    "notice_last_date": {
+      "type": "string",
+      "title": {
+        "en": "Published",
+        "nl": "Gepubliceerd"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/date.svg"
+    },
+    "notice_last_title": {
+      "type": "string",
+      "title": {
+        "en": "Latest notice",
+        "nl": "Laatste melding"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/last.svg"
+    },
+    "notice_recent_1": {
+      "type": "string",
+      "title": {
+        "en": "Recent 1",
+        "nl": "Melding 1"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/recent.svg"
+    },
+    "notice_recent_2": {
+      "type": "string",
+      "title": {
+        "en": "Recent 2",
+        "nl": "Melding 2"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/recent.svg"
+    },
+    "notice_recent_3": {
+      "type": "string",
+      "title": {
+        "en": "Recent 3",
+        "nl": "Melding 3"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/recent.svg"
+    },
+    "notice_recent_4": {
+      "type": "string",
+      "title": {
+        "en": "Recent 4",
+        "nl": "Melding 4"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/recent.svg"
+    },
+    "notice_recent_5": {
+      "type": "string",
+      "title": {
+        "en": "Recent 5",
+        "nl": "Melding 5"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/recent.svg"
+    },
+    "notice_status": {
+      "type": "enum",
+      "title": {
+        "en": "Status",
+        "nl": "Status"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "checking",
+          "title": {
+            "en": "Checking",
+            "nl": "Controleren"
+          }
+        },
+        {
+          "id": "ok",
+          "title": {
+            "en": "Up to date",
+            "nl": "Bijgewerkt"
+          }
+        },
+        {
+          "id": "limited",
+          "title": {
+            "en": "Result limit reached",
+            "nl": "Resultaatlimiet bereikt"
+          }
+        },
+        {
+          "id": "error",
+          "title": {
+            "en": "Error",
+            "nl": "Fout"
+          }
+        }
+      ],
+      "icon": "/assets/capabilities/status.svg"
+    },
+    "notice_count_new": {
+      "type": "number",
+      "title": {
+        "en": "New",
+        "nl": "Nieuw"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "step": 1,
+      "decimals": 0,
+      "icon": "/assets/capabilities/new.svg"
+    },
+    "notice_count_today": {
+      "type": "number",
+      "title": {
+        "en": "Today",
+        "nl": "Vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "step": 1,
+      "decimals": 0,
+      "icon": "/assets/capabilities/today.svg"
+    },
+    "notice_count_week": {
+      "type": "number",
+      "title": {
+        "en": "7 days",
+        "nl": "7 dagen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "step": 1,
+      "decimals": 0,
+      "icon": "/assets/capabilities/week.svg"
+    }
+  },
+  "drivers": [
+    {
+      "name": {
+        "nl": "Bekendmakingenmonitor",
+        "en": "Notices monitor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "notice_count_new",
+        "notice_count_today",
+        "notice_count_week",
+        "notice_status"
+      ],
+      "capabilitiesOptions": {
+        "notice_status": {
+          "preventInsights": true
+        },
+        "notice_count_new": {
+          "preventInsights": true
+        },
+        "notice_count_today": {
+          "preventInsights": true
+        },
+        "notice_count_week": {
+          "preventInsights": true
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/location/assets/images/small.png",
+        "large": "/drivers/location/assets/images/large.png",
+        "xlarge": "/drivers/location/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "address"
+        }
+      ],
+      "id": "location",
+      "settings": [
+        {
+          "id": "search_mode",
+          "type": "dropdown",
+          "value": "address",
+          "label": {
+            "nl": "Zoekmethode",
+            "en": "Search mode"
+          },
+          "values": [
+            {
+              "id": "address",
+              "label": {
+                "nl": "Adres + afstand",
+                "en": "Address + radius"
+              }
+            },
+            {
+              "id": "woonplaats",
+              "label": {
+                "nl": "Stad of dorp (woonplaats)",
+                "en": "Town or city"
+              }
+            },
+            {
+              "id": "wijk",
+              "label": {
+                "nl": "Wijk",
+                "en": "District"
+              }
+            },
+            {
+              "id": "buurt",
+              "label": {
+                "nl": "Buurt",
+                "en": "Neighborhood"
+              }
+            },
+            {
+              "id": "gemeente",
+              "label": {
+                "nl": "Hele gemeente",
+                "en": "Entire municipality"
+              }
+            }
+          ],
+          "hint": {
+            "nl": "Bij wijzigen: vul ook het juiste adres of de gebiedsnaam in. Bij meerdere gelijknamige gebieden voeg je beter opnieuw toe.",
+            "en": "When changing mode, enter the correct address or area name. Re-pair ambiguous areas."
+          }
+        },
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "nl": "Adres"
+          },
+          "value": "",
+          "hint": {
+            "en": "Full Dutch address, e.g. street, house number and city.",
+            "nl": "Volledig Nederlands adres, bijvoorbeeld straat, huisnummer en woonplaats."
+          },
+          "highlight": true
+        },
+        {
+          "id": "area_query",
+          "type": "text",
+          "label": {
+            "nl": "Gebiedsnaam (niet voor adressen)",
+            "en": "Area name (not for addresses)"
+          },
+          "value": "",
+          "hint": {
+            "nl": "Alleen voor stad, dorp, wijk, buurt of gemeente.",
+            "en": "Only for town, city, district, neighborhood or municipality."
+          }
+        },
+        {
+          "id": "radius_m",
+          "type": "number",
+          "label": {
+            "en": "Radius (address mode only)",
+            "nl": "Afstand (alleen bij adres)"
+          },
+          "value": 1000,
+          "units": {
+            "en": "m",
+            "nl": "m"
+          },
+          "hint": {
+            "en": "Used only for Address + radius; area modes use the official geographic boundary.",
+            "nl": "Alleen gebruikt bij Adres + afstand. Bij dorp, wijk, buurt of gemeente bepaalt de officiële gebiedsgrens de zoekopdracht."
+          },
+          "min": 50,
+          "max": 50000,
+          "step": 50,
+          "highlight": true
+        },
+        {
+          "id": "check_interval_min",
+          "type": "number",
+          "label": {
+            "en": "Check interval",
+            "nl": "Controle-interval"
+          },
+          "value": 15,
+          "units": {
+            "en": "min",
+            "nl": "min"
+          },
+          "hint": {
+            "en": "How often Homey checks for new publications.",
+            "nl": "Hoe vaak Homey controleert op nieuwe publicaties."
+          },
+          "min": 5,
+          "max": 1440,
+          "step": 5
+        },
+        {
+          "type": "label",
+          "label": {
+            "nl": "Volledige bekendmakingen bekijken",
+            "en": "View complete notices"
+          },
+          "value": "Open Apps → Bekendmakingen NL → Instellingen om de volledige publicaties te bekijken.",
+          "id": "view_full_notices"
+        }
+      ]
+    }
+  ],
+  "flow": {},
+  "_comment": "Generated snapshot for source review. Homey CLI regenerates app.json from Homey Compose; do not edit this file.",
+  "tags": {
+    "en": [
+      "notices",
+      "permits",
+      "government",
+      "neighbourhood",
+      "Netherlands"
+    ],
+    "nl": [
+      "bekendmakingen",
+      "vergunningen",
+      "overheid",
+      "buurt",
+      "Nederland"
+    ]
+  },
+  "api": {
+    "getMonitors": {
+      "method": "GET",
+      "path": "/monitors"
+    },
+    "getRecentNotices": {
+      "method": "GET",
+      "path": "/monitors/:id/notices"
+    }
+  },
+  "source": "https://github.com/glijie/bekendmakingennl-homey",
+  "support": "https://github.com/glijie/bekendmakingennl-homey"
+}

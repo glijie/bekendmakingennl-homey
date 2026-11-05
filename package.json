@@ -1,0 +1,14 @@
+{
+  "name": "com.patrick.bekendmakingennl",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node test/static-check.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

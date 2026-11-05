@@ -1,0 +1,508 @@
+{
+  "triggers": [
+    {
+      "id": "new_notice",
+      "title": {
+        "en": "New notice",
+        "nl": "Nieuwe bekendmaking"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_permit",
+      "title": {
+        "en": "New permit found",
+        "nl": "Nieuwe vergunning gevonden"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_traffic",
+      "title": {
+        "en": "New traffic notice",
+        "nl": "Nieuwe verkeersbekendmaking"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_tree",
+      "title": {
+        "en": "New tree notice",
+        "nl": "Nieuwe kap- of boombekendmaking"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_event",
+      "title": {
+        "en": "New event notice",
+        "nl": "Nieuwe evenementenbekendmaking"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_plan",
+      "title": {
+        "en": "New planning notice",
+        "nl": "Nieuwe ruimtelijke bekendmaking"
+      },
+      "tokens": [
+        {
+          "name": "title",
+          "type": "string",
+          "title": {
+            "en": "Title",
+            "nl": "Titel"
+          }
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "title": {
+            "en": "Category",
+            "nl": "Categorie"
+          }
+        },
+        {
+          "name": "category_id",
+          "type": "string",
+          "title": {
+            "en": "Category ID",
+            "nl": "Categorie-ID"
+          }
+        },
+        {
+          "name": "authority",
+          "type": "string",
+          "title": {
+            "en": "Authority",
+            "nl": "Instantie"
+          }
+        },
+        {
+          "name": "publication_date",
+          "type": "string",
+          "title": {
+            "en": "Publication date",
+            "nl": "Publicatiedatum"
+          }
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "title": {
+            "en": "Location",
+            "nl": "Locatie"
+          }
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "title": {
+            "en": "Official link",
+            "nl": "Officiële link"
+          }
+        },
+        {
+          "name": "identifier",
+          "type": "string",
+          "title": {
+            "en": "Identifier",
+            "nl": "Kenmerk"
+          }
+        },
+        {
+          "name": "location_match",
+          "type": "string",
+          "title": {
+            "nl": "Locatiecontrole",
+            "en": "Location verification"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "has_new_notices",
+      "title": {
+        "en": "New notices !{{are|aren't}} available",
+        "nl": "Er !{{zijn|zijn geen}} nieuwe bekendmakingen"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "check_now",
+      "title": {
+        "en": "Check now",
+        "nl": "Nu controleren"
+      }
+    }
+  ]
+}
